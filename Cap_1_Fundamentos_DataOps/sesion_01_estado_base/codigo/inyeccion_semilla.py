@@ -43,6 +43,7 @@ def encontrar_raiz_repositorio(inicio: Path) -> Path:
     for candidato in [inicio, *inicio.parents]:
         if (candidato / ".git").exists() and (candidato / "data").is_dir():
             return candidato
+
     raise RuntimeError(
         "No se encontró la raíz del repositorio (se esperaba un directorio con .git/ y data/). "
         f"Búsqueda iniciada en: {inicio}"

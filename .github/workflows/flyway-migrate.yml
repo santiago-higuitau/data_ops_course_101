@@ -116,6 +116,7 @@ jobs:
       # (un enlace caído, un checksum distinto) y no aporta nada. Además, correr
       # exactamente la misma imagen en local y en CI elimina la clase entera de
       # bugs del tipo "en mi máquina sí funciona".
+      # 2026-08-08
       # -----------------------------------------------------------------------
       - name: Descargar la imagen de Flyway
         run: docker pull "${FLYWAY_IMAGE}"

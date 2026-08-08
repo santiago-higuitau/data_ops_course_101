@@ -2,9 +2,9 @@
 marp: true
 theme: dataops
 paginate: true
-footer: 'SI6010-5979 · Tendencias emergentes en desarrollo de software · Sesión 2'
-title: 'Sesión 2: CI/CD de Base de Datos con Flyway'
-author: 'Pos ST1707 — EAFIT'
+footer: "SI6010-5979 · Tendencias emergentes en desarrollo de software · Sesión 2"
+title: "Sesión 2: CI/CD de Base de Datos con Flyway"
+author: "Pos ST1707 — EAFIT"
 lang: es
 ---
 
@@ -83,13 +83,13 @@ Y el nombre gana información: `V202608081000` te dice **cuándo se decidió** e
 </div>
 <div>
 
-| | Secuencial | Timestamp |
-|---|---|---|
-| Ejemplo | `V2__` | `V202608081000__` |
-| Colisión en merge | Frecuente | Casi imposible |
-| Orden legible | Sí | Sí |
-| Dice cuándo | No | Sí |
-| Equipos grandes | Duele | Escala |
+|                   | Secuencial | Timestamp         |
+| ----------------- | ---------- | ----------------- |
+| Ejemplo           | `V2__`     | `V202608081000__` |
+| Colisión en merge | Frecuente  | Casi imposible    |
+| Orden legible     | Sí         | Sí                |
+| Dice cuándo       | No         | Sí                |
+| Equipos grandes   | Duele      | Escala            |
 
 <div class="facts">
 
@@ -121,12 +121,12 @@ El criterio no es el tipo de objeto: es si **volver a ejecutarlo** deja la base 
 <div class="diagrama">
  ORDEN DE EJECUCIÓN
 
- 1. V202608081000  ─┐
- 2. V202608081100   │ por versión
-                   ─┘
- 3. R__fn_...      ─┐
- 4. R__sp_...       │ alfabético,
-                   ─┘ siempre al final
+1.  V202608081000 ─┐
+2.  V202608081100 │ por versión
+    ─┘
+3.  R\__fn_... ─┐
+4.  R\__sp_... │ alfabético,
+─┘ siempre al final
 </div>
 
 <div class="facts">
@@ -276,7 +276,7 @@ Migrating schema "public" to version
 ### Facts
 
 - **`-target` es clave hoy.** El archivo del fix ya está en el repo desde el inicio. Sin `-target`, `migrate` lo aplicaría de una vez y el fallo del Paso 4 nunca ocurriría.
-- La columna admite NULL a propósito: los eventos históricos no tienen campaña *conocida*, que no es lo mismo que no tener campaña.
+- La columna admite NULL a propósito: los eventos históricos no tienen campaña _conocida_, que no es lo mismo que no tener campaña.
 
 </div>
 </div>
@@ -457,7 +457,7 @@ En un año, alguien verá que la columna nació corta, por qué, y cuándo se ar
 
 Hasta aquí todo salió de tu terminal contra `dev`. **`main` no se toca a mano.**
 
-**1. Guardar el secreto.** En GitHub → *Settings* → *Secrets and variables* → *Actions* → **New repository secret**:
+**1. Guardar el secreto.** En GitHub → _Settings_ → _Secrets and variables_ → _Actions_ → **New repository secret**:
 
 - **Name:** `NEON_MAIN_DATABASE_URL`
 - **Value:** el connection string de tu branch `main`

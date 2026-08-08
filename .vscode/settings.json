@@ -5,5 +5,11 @@
   "markdown.marp.themes": [
     "./.marp/tema_dataops.css"
   ],
-  "markdown.marp.enableHtml": true
+  "markdown.marp.enableHtml": true,
+
+  // Prettier como formateador para markdown, activado al guardar.
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
 }
